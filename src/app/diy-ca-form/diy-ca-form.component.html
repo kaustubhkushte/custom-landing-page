@@ -39,8 +39,11 @@
       Submit
     </button>
   </form>
-  <div class="form-group">
-    <p>Form value: {{ diyForm.value | json }}</p>
-    <p>Form status: {{ diyForm.status | json }}</p>
-  </div>
+
+  <ng-template #customLoadingTemplate> </ng-template>
+  <ngx-loading
+    [show]="loading"
+    [config]="{ backdropBorderRadius: '3px' }"
+    [template]="customLoadingTemplate"
+  ></ngx-loading>
 </div>

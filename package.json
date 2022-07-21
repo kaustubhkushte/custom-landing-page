@@ -22,6 +22,7 @@
     "@angular/platform-browser-dynamic": "^14.1.0-next",
     "@angular/router": "^14.1.0-next",
     "angular-in-memory-web-api": "~0.14.0",
+    "ngx-loading": "^13.0.1",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

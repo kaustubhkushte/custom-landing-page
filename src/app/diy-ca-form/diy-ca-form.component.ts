@@ -14,6 +14,7 @@ import { MerchantService } from '../merchant/merchant.service';
 })
 export class DiyCaFormComponent {
   title = 'Angular Form Validation Tutorial';
+  public loading = false;
 
   diyForm: FormGroup = new FormGroup({
     name: new FormControl('', [Validators.required]),
@@ -39,12 +40,15 @@ export class DiyCaFormComponent {
   }
 
   createMerchant() {
-    console.warn('Form submitted', this.diyForm.value);
+    this.loading = true;
+
     this.merchantService.create(this.diyForm.value).subscribe({
       next: (data) => {
+        this.loading = false;
         alert(data);
       },
       error: (err) => {
+        this.loading = false;
         console.log(err);
       },
     });

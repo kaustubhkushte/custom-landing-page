@@ -6,12 +6,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { DiyCaFormComponent } from './diy-ca-form/diy-ca-form.component';
+import { NgxLoadingModule } from 'ngx-loading';
 
 @NgModule({
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     HttpClientModule,
+    NgxLoadingModule.forRoot({}),
     RouterModule.forRoot([{ path: '', component: DiyCaFormComponent }]),
   ],
   declarations: [AppComponent, TopBarComponent, DiyCaFormComponent],
