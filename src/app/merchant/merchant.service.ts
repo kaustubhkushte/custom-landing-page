@@ -10,7 +10,7 @@ export class MerchantService {
 
   create(payload: Merchant) {
     return this.http.post<Merchant>(
-      'https://eougpu9eevblc3p.m.pipedream.net',
+      'https://workflow-preprod.signzy.app/webhook/hdfc-custom-diy-create-merchant',
       payload
     );
   }
